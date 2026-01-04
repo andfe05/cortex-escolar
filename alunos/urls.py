@@ -14,3 +14,4 @@ urlpatterns = [
     path('editar/<int:id>/', editar_aluno, name='editar_aluno'),
     path('excluir/<int:id>/', excluir_aluno, name='excluir_aluno'),
 ]
+

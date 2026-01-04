@@ -73,3 +73,10 @@ def dashboard(request):
         'total_alunos': total_alunos,
         'alunos_por_serie': alunos_por_serie,
     })
+
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
