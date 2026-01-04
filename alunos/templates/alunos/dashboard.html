@@ -1,0 +1,57 @@
+{% extends 'alunos/base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Dashboard</h1>
+<h1>
+    <a href="{% url 'criar_aluno' %}" class="btn btn-primary mb-3">
+    + Novo Aluno
+</a>
+
+</h1>
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h6>Total de Alunos</h6>
+                <h2>{{ total_alunos }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="mb-3">Alunos por Série</h5>
+        <canvas id="graficoSeries"></canvas>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const labels = [
+        {% for item in alunos_por_serie %}
+            "{{ item.serie }}",
+        {% endfor %}
+    ];
+
+    const data = [
+        {% for item in alunos_por_serie %}
+            {{ item.total }},
+        {% endfor %}
+    ];
+
+    new Chart(document.getElementById('graficoSeries'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Quantidade de Alunos',
+                data: data,
+                backgroundColor: 'rgba(13, 110, 253, 0.6)',
+            }]
+        }
+    });
+</script>
+{% endblock %}

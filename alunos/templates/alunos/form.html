@@ -1,0 +1,19 @@
+{% extends 'alunos/base.html' %}
+
+{% block title %}Aluno{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title mb-3">Cadastro de Aluno</h4>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="{% url 'lista_alunos' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
