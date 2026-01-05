@@ -1,76 +1,85 @@
-Sistema web desenvolvido com Django para centralizar e gerenciar dados de alunos de uma escola particular, funcionando como um painel (dashboard) administrativo simples, seguro e escalável.
+# 🧠 Cortex Escolar
 
-🚀 Funcionalidades
+> Sistema web desenvolvido em **Django** para centralizar e gerenciar informações de alunos de uma escola particular.
 
-🔐 Autenticação de usuários (login e logout)
+Um projeto pensado como um **painel administrativo (dashboard)** simples, seguro e escalável, voltado para organização acadêmica e controle de dados.
 
-📊 Dashboard inicial
+---
 
-👨‍🎓 Cadastro de alunos
+## ✨ Funcionalidades
 
-📋 Listagem de alunos
+✅ Autenticação de usuários (login e logout)  
+✅ Dashboard inicial  
+✅ Cadastro de alunos  
+✅ Listagem de alunos  
+✅ Edição de dados  
+✅ Exclusão de alunos  
+✅ Layout base reutilizável  
+✅ Rotas protegidas por autenticação  
 
-✏️ Edição de dados dos alunos
+---
 
-🗑️ Exclusão de alunos
+## 🛠️ Tecnologias Utilizadas
 
-🧭 Navegação com layout base reutilizável
+| Tecnologia | Descrição |
+|----------|----------|
+| 🐍 Python | Linguagem principal |
+| 🌐 Django | Framework web |
+| 🎨 HTML5 | Estrutura das páginas |
+| 💠 Bootstrap 5 | Estilização e layout |
+| 🗄️ SQLite | Banco de dados |
+| 🔧 Git | Controle de versão |
+| ☁️ GitHub | Hospedagem do código |
 
-🔒 Proteção de rotas (acesso apenas para usuários autenticados)
+---
 
-🛠️ Tecnologias Utilizadas
+## 📂 Estrutura do Projeto
 
-Python 3
 
-Django 6
 
-HTML5
-
-Bootstrap 5
-
-SQLite (banco padrão do Django)
-
-Git & GitHub
-
-📁 Estrutura do Projeto
 CortexEscolar/
 │
-├── cortex_escolar/        # Configurações do projeto
+├── cortex_escolar/ # Configurações do projeto
 │
-├── alunos/                # App principal
-│   ├── templates/
-│   │   └── alunos/
-│   │       ├── base.html
-│   │       ├── dashboard.html
-│   │       ├── lista.html
-│   │       └── form.html
-│   ├── views.py
-│   ├── urls.py
-│   └── models.py
+├── alunos/ # App principal
+│ ├── templates/
+│ │ └── alunos/
+│ │ ├── base.html
+│ │ ├── dashboard.html
+│ │ ├── lista.html
+│ │ └── form.html
+│ ├── views.py
+│ ├── urls.py
+│ └── models.py
 │
-├── venv/                  # Ambiente virtual
+├── venv/ # Ambiente virtual
 ├── manage.py
 └── README.md
 
-⚙️ Como Executar o Projeto
-1️⃣ Clone o repositório
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 1️⃣ Clonar o repositório
+```bash
 git clone https://github.com/andfe05/cortex-escolar.git
 cd cortex-escolar
 
-2️⃣ Crie e ative o ambiente virtual
+2️⃣ Criar e ativar o ambiente virtual
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate
 
-3️⃣ Instale as dependências
+3️⃣ Instalar dependências
 pip install django
 
-4️⃣ Execute as migrações
+4️⃣ Executar as migrações
 python manage.py migrate
 
-5️⃣ Crie um superusuário
+5️⃣ Criar superusuário
 python manage.py createsuperuser
 
-6️⃣ Rode o servidor
+6️⃣ Rodar o servidor
 python manage.py runserver
 
 
@@ -80,19 +89,19 @@ http://127.0.0.1:8000/login/
 
 🔐 Autenticação
 
-O sistema utiliza o sistema de autenticação nativo do Django
+Sistema de autenticação nativo do Django
 
-Apenas usuários logados podem acessar o dashboard e os cadastros
+Apenas usuários autenticados acessam o sistema
 
-Logout feito de forma segura via método POST
+Logout realizado de forma segura via POST
 
-📌 Status do Projeto
+📈 Status do Projeto
 
-🟢 Em desenvolvimento
+🟡 Em desenvolvimento
 
-Próximos passos planejados:
+Próximas funcionalidades planejadas:
 
-Perfis de usuário (admin, secretaria, professor)
+Perfis de usuários (admin, secretaria, professor)
 
 Relacionamento entre alunos e turmas
 
@@ -103,7 +112,7 @@ Deploy do sistema
 👨‍💻 Autor
 
 André Felipe Oliveira Dutra
-Estudante de Análise e Desenvolvimento de Sistemas
-Instituto Federal do Piauí – IFPI
+🎓 Estudante de Análise e Desenvolvimento de Sistemas
+🏫 Instituto Federal do Piauí – IFPI
 
-📌 Projeto desenvolvido para fins de estudo e portfólio.
+📌 Projeto desenvolvido para fins educacionais e portfólio.
