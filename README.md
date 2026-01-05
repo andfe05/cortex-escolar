@@ -35,15 +35,28 @@ cortex_escolar/
 │   ├── migrations/
 │   ├── templates/
 │   │   └── alunos/
-│   ├── views.py
+│   │       ├── base.html
+│   │       ├── dashboard.html
+│   │       ├── lista.html
+│   │       ├── form.html
+│   │       └── confirmar_exclusao.html
+│   ├── forms.py
+│   ├── models.py
 │   ├── urls.py
-│   └── models.py
-├── core/
+│   ├── views.py
+│   └── admin.py
+├── cortex_escolar/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
 ├── templates/
-│   └── base.html
+│   └── registration/
+│       └── login.html
 ├── db.sqlite3
 ├── manage.py
-└── requirements.txt
+├── venv/
+└── README.md
+
 ```
 
 ---
