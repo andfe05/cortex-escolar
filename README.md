@@ -35,27 +35,24 @@ Um projeto pensado como um **painel administrativo (dashboard)** simples, seguro
 
 ## 📂 Estrutura do Projeto
 
-
-
 CortexEscolar/
 │
-├── cortex_escolar/ # Configurações do projeto
+├── cortex_escolar/        # Configurações do projeto
 │
-├── alunos/ # App principal
-│ ├── templates/
-│ │ └── alunos/
-│ │ ├── base.html
-│ │ ├── dashboard.html
-│ │ ├── lista.html
-│ │ └── form.html
-│ ├── views.py
-│ ├── urls.py
-│ └── models.py
+├── alunos/                # App principal
+│   ├── templates/
+│   │   └── alunos/
+│   │       ├── base.html
+│   │       ├── dashboard.html
+│   │       ├── lista.html
+│   │       └── form.html
+│   ├── views.py
+│   ├── urls.py
+│   └── models.py
 │
-├── venv/ # Ambiente virtual
+├── venv/                  # Ambiente virtual
 ├── manage.py
 └── README.md
-
 
 ---
 
