@@ -1,17 +1,12 @@
 from django.urls import path
-from .views import (
-    lista_alunos,
-    criar_aluno,
-    editar_aluno,
-    excluir_aluno,
-    dashboard
-)
+from . import views
+
+app_name = 'alunos'
 
 urlpatterns = [
-    path('', lista_alunos, name='lista_alunos'),
-    path('dashboard/', dashboard, name='dashboard'),
-    path('novo/', criar_aluno, name='criar_aluno'),
-    path('editar/<int:id>/', editar_aluno, name='editar_aluno'),
-    path('excluir/<int:id>/', excluir_aluno, name='excluir_aluno'),
+    path('', views.dashboard, name='dashboard'),
+    path('lista/', views.lista_alunos, name='lista_alunos'),
+    path('novo/', views.criar_aluno, name='criar_aluno'),
+    path('editar/<int:id>/', views.editar_aluno, name='editar_aluno'),
+    path('excluir/<int:id>/', views.excluir_aluno, name='excluir_aluno'),
 ]
-

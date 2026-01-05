@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
 
-        <a class="navbar-brand" href="{% url 'dashboard' %}">
+        <a class="navbar-brand" href="{% url 'alunos:dashboard' %}">
             Cortex Escolar
         </a>
 
@@ -30,19 +30,19 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'dashboard' %}">
+                    <a class="nav-link" href="{% url 'alunos:dashboard' %}">
                         Dashboard
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'lista_alunos' %}">
+                    <a class="nav-link" href="{% url 'alunos:lista_alunos' %}">
                         Alunos
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'criar_aluno' %}">
+                    <a class="nav-link" href="{% url 'alunos:criar_aluno' %}">
                         Cadastrar Aluno
                     </a>
                 </li>
