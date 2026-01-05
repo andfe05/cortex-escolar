@@ -1,117 +1,143 @@
 # 🧠 Cortex Escolar
 
-> Sistema web desenvolvido em **Django** para centralizar e gerenciar informações de alunos de uma escola particular.
-
-Um projeto pensado como um **painel administrativo (dashboard)** simples, seguro e escalável, voltado para organização acadêmica e controle de dados.
+Sistema web desenvolvido em **Django** para gerenciamento escolar, com foco no cadastro
+e visualização de alunos, controle de acesso por autenticação e interface simples
+utilizando **Bootstrap**.
 
 ---
 
-## ✨ Funcionalidades
+## 🚀 Funcionalidades
 
-✅ Autenticação de usuários (login e logout)  
-✅ Dashboard inicial  
-✅ Cadastro de alunos  
-✅ Listagem de alunos  
-✅ Edição de dados  
-✅ Exclusão de alunos  
-✅ Layout base reutilizável  
-✅ Rotas protegidas por autenticação  
+- 🔐 Autenticação de usuários (login e logout)
+- 📊 Dashboard inicial
+- 👨‍🎓 Cadastro de alunos
+- 📋 Listagem de alunos
+- 🧭 Rotas protegidas para usuários autenticados
+- 🎨 Interface responsiva com Bootstrap
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia | Descrição |
-|----------|----------|
-| 🐍 Python | Linguagem principal |
-| 🌐 Django | Framework web |
-| 🎨 HTML5 | Estrutura das páginas |
-| 💠 Bootstrap 5 | Estilização e layout |
-| 🗄️ SQLite | Banco de dados |
-| 🔧 Git | Controle de versão |
-| ☁️ GitHub | Hospedagem do código |
+- Python 3
+- Django
+- HTML5
+- Bootstrap 5
+- SQLite (banco padrão do Django)
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-CortexEscolar/
-│
-├── cortex_escolar/        # Configurações do projeto
-│
-├── alunos/                # App principal
+```
+cortex_escolar/
+├── alunos/
+│   ├── migrations/
 │   ├── templates/
 │   │   └── alunos/
-│   │       ├── base.html
-│   │       ├── dashboard.html
-│   │       ├── lista.html
-│   │       └── form.html
 │   ├── views.py
 │   ├── urls.py
 │   └── models.py
-│
-├── venv/                  # Ambiente virtual
+├── core/
+├── templates/
+│   └── base.html
+├── db.sqlite3
 ├── manage.py
-└── README.md
+└── requirements.txt
+```
 
 ---
 
 ## ⚙️ Como Executar o Projeto
 
 ### 1️⃣ Clonar o repositório
-```bash
-git clone https://github.com/andfe05/cortex-escolar.git
+
+```
+git clone https://github.com/seu-usuario/cortex-escolar.git
 cd cortex-escolar
-
-2️⃣ Criar e ativar o ambiente virtual
-python -m venv venv
-venv\Scripts\activate
-
-3️⃣ Instalar dependências
-pip install django
-
-4️⃣ Executar as migrações
-python manage.py migrate
-
-5️⃣ Criar superusuário
-python manage.py createsuperuser
-
-6️⃣ Rodar o servidor
-python manage.py runserver
-
-
-Acesse no navegador:
-
-http://127.0.0.1:8000/login/
+```
 
 ---
 
-🔐 Autenticação
+### 2️⃣ Criar e ativar o ambiente virtual
 
-Sistema de autenticação nativo do Django
+#### Windows
 
-Apenas usuários autenticados acessam o sistema
+```
+python -m venv venv
+venv\Scripts\activate
+```
 
-Logout realizado de forma segura via POST
+#### Linux / macOS
 
-📈 Status do Projeto
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
-🟡 Em desenvolvimento
+---
 
-Próximas funcionalidades planejadas:
+### 3️⃣ Instalar as dependências
 
-Perfis de usuários (admin, secretaria, professor)
+```
+pip install -r requirements.txt
+```
 
-Relacionamento entre alunos e turmas
+---
 
-Métricas no dashboard
+### 4️⃣ Aplicar as migrações
 
-Deploy do sistema
+```
+python manage.py migrate
+```
 
-👨‍💻 Autor
+---
 
-André Felipe Oliveira Dutra
-🎓 Estudante de Análise e Desenvolvimento de Sistemas
-🏫 Instituto Federal do Piauí – IFPI
+### 5️⃣ Criar superusuário (opcional)
 
-📌 Projeto desenvolvido para fins educacionais e portfólio.
+```
+python manage.py createsuperuser
+```
+
+---
+
+### 6️⃣ Executar o servidor
+
+```
+python manage.py runserver
+```
+
+---
+
+### 7️⃣ Acessar no navegador
+
+Aplicação:
+```
+http://127.0.0.1:8000/
+```
+
+Admin:
+```
+http://127.0.0.1:8000/admin/
+```
+
+---
+
+## 🔐 Autenticação
+
+- Acesso restrito a usuários autenticados
+- Logout seguro via POST com proteção CSRF
+
+---
+
+## 👨‍💻 Autor
+
+André Felipe Oliveira Dutra  
+Estudante de Análise e Desenvolvimento de Sistemas  
+IFPI – Campus Floriano
+
+---
+
+## 📄 Licença
+
+Projeto livre para fins educacionais.
